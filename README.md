@@ -1,6 +1,22 @@
 # NgNagiosWallboard
 
+Nagios Wallboard for higher traffic situations.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.4.
+
+##Description
+
+I needed a wallboard for a Nagios monitoring implementation.  There are a few good ones out there already, but none met my exact needs.  I simply wanted a *Go/No Go* status for each host.  I didn't want to see each service seperate.  This keeps things simple and only shows the hosts.  If the host is down it will visibly indicated.  If any of hosts services are down the host again will also be visibly indicated.  
+
+The purpose for this was to put up the wallboard in high traffic areas so that passersby will notice possible issues and be able to take action.
+
+##Dependencies
+
+1.  Nagios configured with host and service checks
+2.  Nagios API - https://github.com/zorkian/nagios-api
+
+Once both requiremnts are met define the apiURL in the app.component.ts file
+
 
 ## Development server
 

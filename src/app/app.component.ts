@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
+import { NagiosService } from './nagios.service';
+
 @Component({
 	moduleId: module.id,
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Nagios Wallboard'; 
+  title = 'Nagios Wallboard';
   icon = 'fa-heartbeat';
 
   apiURL = 'http://10.127.11.17:8080/state';
@@ -25,6 +27,6 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 }

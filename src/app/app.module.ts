@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HostsComponent } from './hosts/hosts.component';
 import { SortPipe } from './sort.pipe';
+import { NagiosService } from './nagios.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { SortPipe } from './sort.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [NagiosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
