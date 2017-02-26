@@ -1,3 +1,45 @@
-<p>
-  header works!
-</p>
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand"><i class="fa {{appIcon}}" aria-hidden="true"></i> {{appTitle}}</div>
+    </div>
+    <div class="navbar-collapse collapse">
+
+      <!-- Left nav -->
+      <!--<ul class="nav navbar-nav hidden-xs hidden-sm">
+        <li><a href="//<? echo $hostname; ?>.viebit.com"><? echo $hostname; ?>.viebit.com</a></li>
+
+      </ul>-->
+
+      <!-- Right nav -->
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="overviewOk > 0" class="label-success">
+          <p class="navbar-status">
+            <i class="fa fa-check fa-2x"></i>
+            <span class="label">{{overviewOk}}</span>
+          </p>
+        </li>
+        <li *ngIf="overviewWarning > 0" class="label-warning">
+          <p class="navbar-status">
+            <i class="fa fa-exclamation-triangle fa-2x"></i>
+            <span class="label">{{overviewWarning}}</span>
+          </p>
+        </li>
+        <li *ngIf="overviewCritical > 0" class="label-danger">
+          <p class="navbar-status">
+            <i class="fa fa-times fa-2x"></i>
+            <span class="label">{{overviewCritical}}</span>
+          </p>
+        </li>
+        <li *ngIf="overviewUnknown > 0" class="label-default">
+          <p class="navbar-status">
+            <i class="fa fa-question fa-2x"></i>
+            <span class="label">{{overviewUnknown}}</span>
+          </p>
+        </li>
+        <li>
+          <p class="navbar-text">{{clock | async | date:'fullDate'}} {{clock | async | date:'mediumTime'}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
