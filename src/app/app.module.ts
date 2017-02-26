@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { HostsComponent } from './hosts/hosts.component';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HostsComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
